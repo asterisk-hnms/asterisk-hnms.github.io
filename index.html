@@ -1,46 +1,119 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
+   
     <meta charset="UTF-8">
-    <title>YUKINA SATO PORTFOLIO SITE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
+    <title>MARIANDEL</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+body{
+    margin: 0;
+    padding: 0;
+}
+#canvas-container{
+    width: 100%;
+    height: 50px;
+}
+</style>
+
 </head>
 
-<body>
-  
-    <h1>YUKINA * PORTFOLIO SITE</h1>
-   
-    <p>GRAPHIC  / ILLUSTRATION / MOTION</p>
-   
-    <h2>PROFILE</h2>
-    <p>佐藤優輝菜</p>
-   
-<p>●●生まれ。現在は●●で●●中。<br>
-最近は●●にはまっていて、●●をさせたら右に出る者はいない...と言われるようになりたい。<br>
-●●をさせたら右に出る者はいない...と言われるようになりたい。<br>
-次に生まれ変わったら●●になると決めている。<br>
-    どうぞよろしく。</p>
-   
-   
-   <h2>WORKS</h2>
-   <p>これまでの制作事例を紹介</p>
-   
-    <h3>GRAPHIC</h3>
-    <img src="img/graphicpos.png" alt="GRAHIC">
-    <p>ポスター作成</p>
-    
-    <h3>ILLUSTRATION</h3>
-    <img src="img/illustrationhana.png" alt="ILLUTRATION">
-    <p>本・グッズ制作</p>
-    
-    <h3>MOTION</h3>
-    <img src="img/animationanima.png" alt="ANIMATION">
-    <p>アニメーション</p>
-    
-    
-    <p>copyright., ●●.com</p>
-    
-</body>
 
+<body>
+   
+   
+   
+<header>
+    <div class="headermain-containe">
+        <h1>YUKINA SATO * PORTFOLIO SITE<br>
+        MARIANDEL</h1>
+        <p>GRAPHIC  / ILLUSTRATION / ANIMATION</p>
+    </div>
+</header>
+   
+   <div id="canvas-container"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.js"></script>
+
+<script>
+var hue; // 色相の値を保存する変数
+
+function setup(){
+    var canvas = createCanvas(windowWidth,50);
+    canvas.parent("canvas-container");
+    colorMode(HSB,360,100,100,100); //colorMode HSB
+    hue = 0; // 色相の初期値を0
+}
+
+function draw(){
+	// 背景
+    background(hue,34,100,100);
+
+    // 色相を1ずつ足す
+    hue++;
+
+    // 色相が360を超えたら0に戻す
+    if (hue >= 360) {
+        hue = 0;
+    }
+}
+    
+function windowResized(){
+    resizeCanvas(windowWidth,50);
+}
+</script>
+
+   
+<div class="profile">
+    <img src="img/my%20profile.png" alt="myprofile">
+    <div class="profile-container">
+        <h2>*PROFILE*</h2>
+        <h3>佐藤優輝菜</h3>
+        <p>1997年生まれ。現在は『華政』の名で活動中。<br>
+        最近はゲームと旅行にはまっている。花や星やキラキラしたものがとても好き。<br>
+        男女問わず素敵な美人を描けるようになりたい。<br>
+        よろしくお願いします。</p>
+    </div>
+</div>
+
+
+<div class="works">
+    <h2>*WORKS*</h2>
+    <p>これまでの制作事例を紹介</p>
+
+    <div class="works-container">
+        <div class="graphic">
+            <h3>GRAPHIC>>></h3>
+            <img src="img/graphic.png" alt="graphic">
+        </div>
+        
+        <div class="illustration">
+            <h3>ILLUSTRATION>>></h3>
+            <img src="img/illustration.png" alt="illustration">
+        </div>
+        
+        <div class="animation">
+            <h3>ANIMATION>>></h3>
+            <img src="img/animation.png" alt="animation">
+        </div>
+    </div>
+</div>
+
+
+<footer>
+    <div class="footer-container">
+       <img src="img/unnamed.png" alt="twi">
+       <img src="img/unnamed-(1).png" alt="pixiv">
+    </div>
+            <p>copyright., ●●.com </p>
+</footer>
+
+</body>
 </html>
