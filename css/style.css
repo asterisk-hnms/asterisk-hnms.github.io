@@ -130,6 +130,13 @@ footer{
     padding: 72px 0;
 }
 
+.footer-container{
+    width: 1284px;
+    margin: 0 auto; /* 上下0 左右auto*/
+    display: flex;
+    justify-content:center;
+}
+
 footer p{
     font-size: 12px;
     text-align: center;
