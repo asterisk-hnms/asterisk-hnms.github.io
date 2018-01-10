@@ -134,8 +134,5 @@ footer p{
     font-size: 12px;
     text-align: center;
 }
-.footer-container{
-    width: 1284px;
-    margin: 0 auto; /* 上下0 左右auto*/
-    display: flex;
+
 }
